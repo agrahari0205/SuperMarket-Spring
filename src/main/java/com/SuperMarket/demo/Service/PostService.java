@@ -21,6 +21,10 @@ public class PostService {
 
     public void createData(PostDto postDto){
         PostModel post=new PostModel();
+        System.out.println(postDto.getCostPrice());
+        System.out.println(postDto.getSalePrice());
+        if(postDto.getId()!=null){
+            post.setId(postDto.getId());}
         post.setName(postDto.getName());
         post.setQuantity(postDto.getQuantity());
         post.setCostPrice(postDto.getCostPrice());

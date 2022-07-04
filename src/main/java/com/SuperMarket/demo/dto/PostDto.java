@@ -13,7 +13,7 @@ public class PostDto {
     private Long id;
     private String name;
     private Long quantity;
-    private Long CostPrice;
-    private Long SalePrice;
+    private Long costPrice;
+    private Long salePrice;
 
 }

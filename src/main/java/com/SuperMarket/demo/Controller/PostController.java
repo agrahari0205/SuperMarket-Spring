@@ -38,9 +38,13 @@ public class PostController {
         postService.DeleteById(id);
         return new ResponseEntity(HttpStatus.OK);
     }
-    @PutMapping("/update/{id}")
+    @PutMapping("/update")
     public ResponseEntity updateData(@RequestBody PostDto postDto){
         postService.createData(postDto);
         return new ResponseEntity(HttpStatus.OK);
+    }
+    @GetMapping("/all")
+    public ResponseEntity<PostDto> getData(){
+        return new ResponseEntity(postService.getAllData(), HttpStatus.OK);
     }
 }

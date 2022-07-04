@@ -21,8 +21,8 @@ public class PostModel {
     private  Long id;
     private String name;
     private Long quantity;
-    private Long costPrice;
-    private Long salePrice;
+    private Long CostPrice;
+    private Long SalePrice;
     private Instant createdOn;
 
 }

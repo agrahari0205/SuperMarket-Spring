@@ -24,8 +24,8 @@ public class AuthService {
     }
     public AuthResponse login(LoginRequest loginRequest){
         boolean isSuccess =  userRepository.findAll().stream()
-                .anyMatch(user-> user.getUsername().equals(loginRequest.getUsername())
+                .anyMatch(user-> user.getEmail().equals(loginRequest.getEmail())
         && user.getPassword().equals(loginRequest.getPassword()));
-        return new AuthResponse(isSuccess, loginRequest.getUsername());
+        return new AuthResponse(isSuccess, loginRequest.getEmail());
     }
 }
